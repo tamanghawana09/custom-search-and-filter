@@ -5,3 +5,140 @@
     Author: Hawana Tamang
     Version: 1.0.0
 */
+
+/* Wrapper to hold both the main content and the side filter*/
+.content-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 300px;   /* Main content and 300px wide sidebar*/   
+    gap:20px;
+    padding: 20px;
+}
+/* Styling for main container */
+.main-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+ /* Styling for side filter container */
+ .side-container {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius:8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px; 
+}
+/* Styling for the forms */
+.side-filter-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.side-filter-form input,
+.side-filter-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+/* For smaller screens, stack the sidebar below the content */
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr; /* Full width on small screens */
+    }
+
+    .side-container {
+        margin-top: 20px;
+    }
+}
+/* Styling for forms */
+.main-filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.main-filter-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.main-filter-form input, .main-filter-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+/* Grid container for product items */
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+    gap: 20px;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns for tablets and small desktops */
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile screens */
+    }
+}
+
+/* Styling for product items */
+.product-item {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+    text-align: center; /* Align content centrally */
+}
+
+.product-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item h2{
+    font-size: 1rem !important;
+}
+.product-item h2 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.product-item p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.product-item .manufacturer {
+    font-style: italic;
+    color: #888;
+}
